@@ -25,7 +25,7 @@ Corregido y hecho el commit:
 ![image](https://i.imgur.com/W2XnqOS.png "deploy action")
 
 ## dockerhub
-[Imagen](https://hub.docker.com/repository/docker/diegobollini/test_actions)
+[Imagen creada](https://hub.docker.com/repository/docker/diegobollini/test_actions)  
 ![image](https://i.imgur.com/B3Cengf.png "tags")
 
 ## github pages
