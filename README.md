@@ -16,5 +16,6 @@ $ nano .github/workflow/push.yml
 
 - Github settings
 Repositorio > Settings > Secrets > New
-DOCKER_USERNAME = diegobollini
+DOCKER_USERNAME = diegobollini  
 DOCKER_PASSWORD = "pass"
+

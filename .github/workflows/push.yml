@@ -1,17 +1,17 @@
-on: push #al hacer push, realiza el / los job/s
-name: deploy #nombre = deploy
+on: push
+name: deploy
 jobs:
   deploy:
     name: deploy to cluster
-    runs-on: ubuntu-latest #equipo virtual donde se ejecuta el job
-    steps: #actions
-    - uses: actions/checkout@master #actions = organización de la action / repo, checkout = action, master = versión
-    - name: build and push to docker #construye imagen y sube a dockerhub
-      uses: docker/build-push-action@v1 #action de docker
-      with: #options específicas para las action
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: build and push to docker
+      uses: docker/build-push-action@v1
+      with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: ${{ github.repository }} #mismo name para github y dockerhub
+        repository: ${{ github.repository }}
         tag_with_ref: true
         tag_with_sha: true
-        tags: ${{ github.sha }} #tags relevantes / necesarias
+        tags: ${{ github.sha }}
