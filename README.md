@@ -19,20 +19,20 @@ Repositorio > Settings > Secrets > New
 DOCKER_USERNAME = diegobollini  
 DOCKER_PASSWORD = "pass"
 
-## commit & deploy
+## Commit & deploy
 Eliminé comentarios (#comentarios) de push.yml porque no funcionó el push > action.
 Corregido y hecho el commit:
 ![image](https://i.imgur.com/W2XnqOS.png "deploy action")
 
-## dockerhub
+## Dockerhub
 [Imagen creada](https://hub.docker.com/repository/docker/diegobollini/test_actions)  
 ![image](https://i.imgur.com/B3Cengf.png "tags")
 
-## github pages
+## Github pages
 Settings > GitHub Pages > Source
 URL: https://diegobollini.github.io/test_actions/
 
-## kubernetes con github
+## Kubernetes con github
 [Marketplace](https://github.com/marketplace?type=actions) > Types > Actions: kubectl  
 [Github Action for Kubernetes CLI](https://github.com/marketplace/actions/kubernetes-cli-kubectl)  
 Agregar action a push.yml y configurar según doc:  
@@ -51,3 +51,11 @@ $ cat ~/_desarrollo/test_actions/testactions-kubeconfig.yaml | base64 pbcopy
 Secrets / New secret > KUBE_CONFIG_DATA
 ```
 - commit & push
+
+### Fixing kubernetes deployment
+```
+Error from server (NotFound): deployments.extensions "my-app" not found
+```
+[Link](https://www.youtube.com/watch?v=q-ZicDSb3Cc)  
+
+Continue from https://youtu.be/MNBf-ylhtK0?t=479
